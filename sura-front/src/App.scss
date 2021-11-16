@@ -1,0 +1,107 @@
+* {
+	box-sizing: border-box;
+	outline: none;
+}
+img {
+	display: block;
+}
+html {
+	scroll-behavior: smooth;
+}
+body {
+	padding: 0;
+	margin: 0;
+}
+body {
+	font-family: "Montserrat", sans-serif !important;
+	font-size: 14px;
+	font-weight: 400;
+
+	.fondo {
+		float: left;
+		width: 100%;
+
+		.row {
+			float: left;
+			width: 100%;
+		}
+	}
+}
+.movil {
+	display: none;
+}
+.desktop {
+	display: block;
+}
+@media only screen and (min-width: 320px) and (max-width: 790px) {
+	.movil {
+		display: block;
+	}
+	.desktop {
+		display: none;
+	}
+	.ant-menu-horizontal {
+		background: transparent;
+		border-bottom: 0px;
+	}
+	.opcion {
+		font-weight: 500;
+		font-size: 18px;
+		color: black;
+	}
+	.ant-menu-item .ant-menu-item-icon,
+	.ant-menu-submenu-title .ant-menu-item-icon,
+	.ant-menu-item .anticon,
+	.ant-menu-submenu-title .anticon {
+		font-size: 28px;
+		margin-right: 0px;
+		color: white;
+	}
+	.ant-menu-item .ant-menu-item-icon,
+	.ant-menu-submenu-title .ant-menu-item-icon,
+	.ant-menu-item .anticon,
+	.ant-menu-submenu-title .anticon:focus {
+		font-size: 28px;
+		margin-right: 0px;
+		color: #a942ea;
+		border-bottom: 0px solid #a942ea;
+	}
+	.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover,
+	.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu:hover,
+	.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-active,
+	.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-active,
+	.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-open,
+	.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-open,
+	.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected,
+	.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-selected {
+		color: #a942ea !important;
+		border-bottom: 0px solid #a942ea;
+	}
+	.ant-menu-horizontal > .ant-menu-item,
+	.ant-menu-horizontal > .ant-menu-submenu {
+		border-bottom: 0px solid #a942ea;
+	}
+}
+
+.ant-modal-body {
+	h3 {
+		text-align: center;
+	}
+
+	.ant-picker {
+		margin: 0 auto 20px;
+		position: relative;
+		display: block;
+		max-width: 200px;
+	}
+}
+
+.obligatory {
+	color: red !important;
+	margin: 0 5px;
+}
+
+.ant-back-top {
+    right: 10px !important;
+    bottom: 25px !important;
+}

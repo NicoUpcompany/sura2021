@@ -1,0 +1,49 @@
+.agenda {
+    width: 100%;
+    float: left;
+    position: relative;
+    margin-top: 30px;
+
+    &:nth-child(1) {
+        margin-top: 0px;
+    }
+
+    .container {
+        width: 100%;
+        height: auto;
+
+        .description {
+            font-size: 13px;
+            color: #9e9e9e;
+            float: left;
+            margin: auto;
+            margin-top: 5px;
+        }
+        
+        .peak {
+            font-size: 13px;
+            color: #9e9e9e;
+            float: left;
+            margin: auto;
+            margin: 5px 0 0 20px;
+            margin-top: 5px;
+            width: auto;
+        }
+    
+        .title {
+            font-size: 18px;
+            float: left;
+        }
+    }
+
+    .ant-btn {
+        position: absolute;
+        bottom: 20px;
+    }
+}
+
+.no-data {
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+}

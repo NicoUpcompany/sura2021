@@ -1,0 +1,257 @@
+.fondo-confirm {
+	background-image: url("../../../assets/img/fondoExito.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	.contenedorConfirmacion {
+		float: left;
+		width: 100%;
+		min-height: calc(100vh);
+
+		.img {
+			width: 100%;
+			max-width: 200px;
+		}
+		.img2 {
+			position: absolute;
+			bottom: 30px;
+			right: 30px;
+		}
+		.row {
+			width: 100%;
+			float: left;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			padding: 50px;
+			h2 {
+				margin: 20px 0px;
+				color: #fff;
+				font-weight: 600;
+				font-size: 28px;
+				padding: 0px 20px;
+			}
+			.card {
+				float: left;
+				width: 100%;
+				max-width: 900px;
+				background: white;
+				border-radius: 5px;
+				padding: 30px 20px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				margin-bottom: 30px;
+				-webkit-box-shadow: 0px 0px 13px -2px rgba(0, 0, 0, 0.75);
+				-moz-box-shadow: 0px 0px 13px -2px rgba(0, 0, 0, 0.75);
+				box-shadow: 0px 0px 13px -2px rgba(0, 0, 0, 0.75);
+				.letras {
+					display: flex;
+					align-items: center;
+					margin-bottom: 40px;
+					width: 100%;
+					justify-content: space-between;
+					max-width: 650px;
+					div {
+						display: flex;
+						align-items: center;
+						span {
+							font-size: 18px;
+							font-weight: 500;
+							padding-left: 10px;
+						}
+						.logo {
+							color: #000;
+						}
+					}
+				}
+				.boton {
+					float: left;
+					width: 100%;
+					max-width: 650px;
+					position: relative;
+					height: 50px;
+					button {
+						float: left;
+						width: 100%;
+						cursor: pointer;
+						display: flex;
+						align-items: center;
+						justify-content: space-between;
+						padding: 0px 20px;
+						color: white;
+						height: 40px;
+						border: none;
+						border-radius: 0px;
+						font-weight: 700;
+						font-size: 16px;
+						p {
+							margin: 0px;
+						}
+					}
+					#btn {
+						z-index: 999 !important;
+						position: absolute;
+						top: 0px;
+						left: 0px;
+					}
+					.opciones {
+						float: left;
+						width: 100%;
+						height: 0px;
+						overflow: hidden;
+						transition: 3s all;
+						position: absolute;
+						z-index: 0;
+						top: 40px;
+						left: 0px;
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						justify-content: center;
+						background-color: #0000a2;
+						:hover{
+							background-color: black !important;
+						}
+						button {
+							display: flex;
+							align-items: center;
+							justify-content: flex-start;
+							background: transparent;
+							float: left;
+							width: 100%;
+							font-size: 18px;
+							font-weight: 600;
+							letter-spacing: -1px;
+							.icon {
+								margin-right: 10px;
+								width: 20px;
+								height: 20px;
+							}
+							.icon2 {
+								margin-right: 7px;
+								width: 25px;
+								height: 25px;
+							}
+							img {
+								margin-right: 10px;
+							}
+						}
+						.blanco {
+							background: white !important;
+							color: #a942ea;
+							&:hover {
+								background: #a942ea !important;
+								color: #fff;
+								fill: #fff !important;
+							}
+						}
+					}
+				}
+			}
+			.card2 {
+				float: left;
+				width: 100%;
+				background: white;
+				max-width: 900px;
+				border-radius: 5px;
+				padding: 20px 20px;
+				display: flex;
+				justify-content: space-between;
+				-webkit-box-shadow: 0px 0px 13px -2px rgba(0, 0, 0, 0.75);
+				-moz-box-shadow: 0px 0px 13px -2px rgba(0, 0, 0, 0.75);
+				box-shadow: 0px 0px 13px -2px rgba(0, 0, 0, 0.75);
+				div {
+					&:first-child {
+						display: flex;
+						align-items: center;
+						width: 100%;
+					}
+					span {
+						color: #0000a2;
+						font-weight: 500;
+						font-size: 16px;
+						width: 150px;
+						padding: 0px 15px 0px 0px;
+					}
+					input {
+						width: calc(100% - 170px);
+						background: white;
+						color: black;
+						height: 40px;
+						font-weight: 500;
+						border-radius: 2px;
+						padding-left: 20px;
+						border: 1px solid #a4a5a5;
+						&::placeholder {
+							color: green;
+						}
+					}
+				}
+				.boton {
+					width: 20%;
+
+					button {
+						width: 100%;
+						color: white;
+						height: 40px;
+						border-radius: 2px;
+						border: none;
+						font-weight: 700;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						text-transform: uppercase;
+						cursor: pointer;
+					}
+				}
+			}
+			.fondo2 {
+				width: 100%;
+				float: left;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+			}
+		}
+	}
+}
+@media only screen and (min-width: 320px) and (max-width: 790px) {
+	.fondo .contenedorConfirmacion .row .card .letras {
+		flex-direction: column;
+	}
+	.fondo .contenedorConfirmacion .row .card .letras div:first-child {
+		margin-bottom: 10px;
+	}
+	.fondo {
+		.contenedorConfirmacion {
+			min-height: 120vh;
+			.card2 {
+				.boton {
+					width: 20%;
+
+					button {
+						width: 100%;
+						padding: 10px 20px;
+						color: white;
+						height: 40px;
+						border-radius: 2px;
+						border: none;
+						font-size: 14px;
+						font-weight: 700;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						text-transform: uppercase;
+						cursor: pointer;
+					}
+				}
+			}
+		}
+	}
+}

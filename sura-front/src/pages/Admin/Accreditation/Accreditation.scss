@@ -1,0 +1,31 @@
+.accreditation {
+    position: relative;
+    display: block;
+    margin: auto;
+    
+    h1 {
+        position: relative;
+        display: block;
+        margin: 0 auto 50px;
+        text-align: center;
+    }
+    
+    .container-form {
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        max-width: 800px;
+
+        .right {
+            position: absolute;
+            right: 0;
+        }
+
+        .button {
+            position: relative;
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+        }
+    }
+}

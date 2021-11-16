@@ -1,0 +1,25 @@
+.networking {
+    position: relative;
+    display: block;
+    margin: auto;
+
+    .container {
+        h2, h3, p {
+            text-align: center;
+        }
+    }
+    
+    .button {
+        position: relative;
+        display: block;
+        margin: 0 auto 20px;
+        
+        button {
+            position: relative;
+            display: block;
+            margin: 0 auto;
+            min-width: 170px;
+            border: none;
+        }
+    }
+}

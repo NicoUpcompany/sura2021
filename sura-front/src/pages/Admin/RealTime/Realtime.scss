@@ -1,0 +1,119 @@
+@import "../../../scss/variables";
+
+.realtime {
+	text-align: center;
+	float: left;
+	width: 100%;
+
+	div {
+		background-color: transparent !important;
+
+		p {
+			font-size: 20px;
+			font-weight: 600;
+		}
+	}
+
+	.mapa {
+		width: 100%;
+		float: left;
+
+		h1 {
+			height: 500px;
+			line-height: 500px;
+		}
+	}
+
+	.container {
+		width: 100%;
+
+		.conexion-info {
+			position: absolute;
+			right: 0px;
+			text-align: center;
+			// width: calc(33% - 10px);
+			max-width: 500px;
+			padding: 20px;
+			float: left;
+			background-color: $dashboard-primary-color !important;
+			color: $font-light;
+			border-radius: 10px 10px 10px 10px;
+			-moz-border-radius: 10px 10px 10px 10px;
+			-webkit-border-radius: 10px 10px 10px 10px;
+			border: 0px solid #000000;
+			-webkit-box-shadow: 10px 10px 26px 0px rgba(0, 0, 0, 0.75);
+			-moz-box-shadow: 10px 10px 26px 0px rgba(0, 0, 0, 0.75);
+			box-shadow: 10px 10px 26px 0px rgba(0, 0, 0, 0.75);
+			margin: 20px 10px 20px;
+			h1 {
+				color: $font-light !important;
+			}
+			* {
+				color: #fff;
+			}
+		}
+
+		.conexion-info-peak {
+			position: absolute;
+			right: 0px;
+			text-align: center;
+			// width: calc(33% - 10px);
+			max-width: 500px;
+			padding: 20px;
+			float: left;
+			background-color: $dashboard-primary-color !important;
+			color: $font-light;
+			border-radius: 10px 10px 10px 10px;
+			-moz-border-radius: 10px 10px 10px 10px;
+			-webkit-border-radius: 10px 10px 10px 10px;
+			border: 0px solid #000000;
+			-webkit-box-shadow: 10px 10px 26px 0px rgba(0, 0, 0, 0.75);
+			-moz-box-shadow: 10px 10px 26px 0px rgba(0, 0, 0, 0.75);
+			box-shadow: 10px 10px 26px 0px rgba(0, 0, 0, 0.75);
+			margin: 130px 10px 20px;
+			h1 {
+				color: $font-light !important;
+			}
+			* {
+				color: #fff;
+			}
+		}
+		.conexion-info-chart2 {
+			float: left;
+			width: calc(67% - 10px);
+
+			.ant-table-wrapper {
+				float: left;
+				background-color: #fff !important;
+				margin: 20px 0px 20px 10px;
+			}
+		}
+		.pie-chart {
+			width: calc(33% - 10px);
+			float: left;
+
+			.conexion-info-chart {
+				text-align: center;
+				width: calc(100% - 20px);
+				max-width: 500px;
+				padding: 20px;
+				float: left;
+				background-color: #fff !important;
+				border-radius: 10px 10px 10px 10px;
+				-moz-border-radius: 10px 10px 10px 10px;
+				-webkit-border-radius: 10px 10px 10px 10px;
+				border: 0px solid #000000;
+				-webkit-box-shadow: 10px 10px 26px 0px rgba(0, 0, 0, 0.75);
+				-moz-box-shadow: 10px 10px 26px 0px rgba(0, 0, 0, 0.75);
+				box-shadow: 10px 10px 26px 0px rgba(0, 0, 0, 0.75);
+				margin: 20px 10px 0px;
+			}
+		}
+	}
+	
+	.ant-table table {
+		-webkit-box-shadow: 10px 10px 26px 0px rgba(0, 0, 0, 0.75);
+		-moz-box-shadow: 10px 10px 26px 0px rgba(0, 0, 0, 0.75);
+		box-shadow: 10px 10px 26px 0px rgba(0, 0, 0, 0.75);
+  	}
+}

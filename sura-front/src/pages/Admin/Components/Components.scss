@@ -1,0 +1,13 @@
+.components {
+    background-color: transparent;
+
+    .ant-collapse-content-box {
+        background-color: #F0F2F5;
+    }
+
+    .sign-in-panel {
+        .ant-collapse-content-box {
+            min-height: 100vh;
+        }
+    }
+}

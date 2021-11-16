@@ -1,0 +1,101 @@
+.waitingroom {
+    position: relative;
+    display: block;
+    margin: auto;
+
+    .button-page {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    
+    .upload-avatar {
+        position: relative;
+        display: block;
+        margin: auto;
+        text-align: center;
+        
+        .ant-avatar {
+            border-radius: 0 !important;
+            cursor: pointer;
+            margin-bottom: 50px;
+        }
+    }
+    h1 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .react-crop {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+    }
+
+    .canvas-container {
+        position: absolute;
+        visibility: hidden;
+        display: none;
+    }
+
+    input[type="file"] {
+        position: absolute;
+        left: 0px;
+        opacity: 0;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    label[for="file"],
+    label[for="file2"] {
+        font-size: 14px !important;
+        color: #262626;
+        cursor: pointer;
+        width: 100%;
+        height: 35px;
+        background: #f3f3f3;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: 20px;
+        border: 2px solid #1890ff;
+        position: relative;
+        max-width: 300px;
+        margin: 0 auto;
+
+        div {
+            position: absolute;
+            width: 35px;
+            height: 35px;
+            background: #1890ff;
+            right: 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: -1px;
+
+            .icon {
+                color: white;
+                font-size: 38px;
+            }
+        }
+    }
+    
+    .form-edit {
+        position: relative;
+        display: block;
+        margin: 0 auto;
+
+        .colors {
+            margin: 0 0 30px;
+        }
+        
+        button {
+            position: relative;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
+}

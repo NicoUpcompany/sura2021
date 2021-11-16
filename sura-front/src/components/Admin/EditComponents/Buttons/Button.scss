@@ -1,0 +1,356 @@
+.admin-button {
+	position: relative;
+	display: block;
+	margin: 0 auto;
+	min-height: 400px;
+
+	.container-table {
+		position: relative;
+		display: block;
+		margin: 0 auto;
+
+		.arrow {
+			margin: 5px 10px 0;
+			position: absolute;
+			left: 0;
+			cursor: pointer;
+			z-index: 1;
+		}
+
+		.ant-table {
+			margin-top: 50px;
+			overflow: scroll;
+
+			.ant-avatar {
+				border-radius: 0;
+				height: 100px;
+			}
+
+			.ant-carousel {
+				width: 200px !important;
+
+				.slick-dots {
+					z-index: 0;
+
+					li button {
+						margin-top: -20px;
+					}
+				}
+			}
+		}
+
+		.ant-input,
+		.ant-select {
+			margin: 0 auto 20px;
+			position: relative;
+			display: block;
+			max-width: 200px;
+		}
+
+		.ant-btn {
+			margin: 0 20px;
+			position: absolute;
+			right: 0;
+			max-width: 200px;
+		}
+
+		.ant-input-textarea {
+			max-width: 300px;
+		}
+
+		.upload-avatar {
+			display: table;
+			margin: 0 auto;
+			border: 2px solid #9a9a9a;
+			border-style: dashed;
+			padding: 10px;
+			cursor: pointer;
+
+			.ant-avatar {
+				border-radius: 0;
+			}
+		}
+	}
+
+	.container {
+		position: relative;
+		display: block;
+		margin: 0 auto;
+
+		.arrow {
+			margin: 5px 10px 0;
+			position: absolute;
+			left: 0;
+			cursor: pointer;
+			z-index: 1;
+		}
+
+		.title {
+			position: relative;
+			display: block;
+			margin: 0 auto 50px;
+			text-align: center;
+		}
+
+		.input-ant,
+		.select-ant {
+			margin: 0 auto 20px;
+			position: relative;
+			display: block;
+			max-width: 200px;
+		}
+
+		.ant-picker {
+			margin: 0 auto 20px;
+			position: relative;
+			display: flex;
+			max-width: 300px;
+		}
+
+		.duration-time {
+			margin: 0 auto 20px;
+			position: relative;
+			display: block;
+			max-width: 300px;
+
+			.ant-input-number {
+				width: 70%;
+			}
+			.ant-select {
+				width: 30%;
+			}
+		}
+
+		.btn {
+			margin: 50px auto 20px !important;
+			position: relative !important;
+			display: block !important;
+			max-width: 200px !important;
+		}
+
+		.upload-file {
+			position: relative;
+			display: flex;
+
+			input[type="file"] {
+				position: absolute;
+				left: 0px;
+				opacity: 0;
+				width: 100%;
+				cursor: pointer;
+			}
+
+			label[for="file"] {
+				font-size: 14px !important;
+				color: #262626;
+				cursor: pointer;
+				float: left;
+				width: 100%;
+				height: 35px;
+				background: #f3f3f3;
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
+				padding-left: 20px;
+				border: 2px solid #1890ff;
+				position: relative;
+				max-width: 300px;
+				margin: 0 auto;
+
+				div {
+					position: absolute;
+					width: 35px;
+					height: 35px;
+					background: #1890ff;
+					right: 0px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+					.icon {
+						color: white;
+						font-size: 38px;
+					}
+				}
+			}
+		}
+
+		.ant-btn {
+			margin: 0 20px;
+			position: absolute;
+			right: 0;
+			max-width: 200px;
+		}
+
+		.btn {
+			margin-top: 20px;
+		}
+
+		.ant-input-textarea {
+			margin: 0 auto 20px;
+			position: relative;
+			display: block;
+			max-width: 300px;
+			padding: 0 50px;
+
+			textarea {
+				width: 100%;
+				display: block;
+				position: relative;
+			}
+		}
+
+		.upload-avatar {
+			display: table;
+			margin: 0 auto;
+			border: 2px solid #9a9a9a;
+			border-style: dashed;
+			padding: 10px;
+			cursor: pointer;
+
+			.ant-avatar {
+				border-radius: 0;
+			}
+		}
+	}
+}
+
+
+.ant-modal-content {
+	.container {
+		position: relative;
+		display: block;
+		margin: 0 auto;
+
+		.title {
+			position: relative;
+			display: block;
+			margin: 0 auto 50px;
+			text-align: center;
+		}
+
+		.input-ant,
+		.select-ant {
+			margin: 0 auto 20px;
+			position: relative;
+			display: block;
+			max-width: 200px;
+		}
+
+		.ant-picker {
+			margin: 0 auto 20px;
+			position: relative;
+			display: flex;
+			max-width: 300px;
+		}
+
+		.duration-time {
+			margin: 0 auto 20px;
+			position: relative;
+			display: block;
+			max-width: 300px;
+
+			.ant-input-number {
+				width: 70%;
+				display: inline-block;
+			}
+			.ant-select {
+				width: 30%;
+				display: inline-block;
+			}
+		}
+
+		.btn {
+			margin: 50px auto 20px !important;
+			position: relative !important;
+			display: block !important;
+			max-width: 200px !important;
+		}
+
+		.upload-file {
+			position: relative;
+			display: flex;
+
+			input[type="file"] {
+				position: absolute;
+				left: 0px;
+				opacity: 0;
+				width: 100%;
+				cursor: pointer;
+			}
+
+			label[for="file"],
+			label[for="file2"] {
+				font-size: 14px !important;
+				color: #262626;
+				cursor: pointer;
+				float: left;
+				width: 100%;
+				height: 35px;
+				background: #f3f3f3;
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
+				padding-left: 20px;
+				border: 2px solid #1890ff;
+				position: relative;
+				max-width: 300px;
+				margin: 0 auto;
+
+				div {
+					position: absolute;
+					width: 35px;
+					height: 35px;
+					background: #1890ff;
+					right: 0px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+					.icon {
+						color: white;
+						font-size: 38px;
+					}
+				}
+			}
+		}
+
+		.ant-btn {
+			margin: 0 20px;
+			position: absolute;
+			right: 0;
+			max-width: 200px;
+		}
+
+		.btn {
+			margin-top: 20px;
+		}
+
+		.ant-input-textarea {
+			margin: 0 auto 20px;
+			position: relative;
+			display: block;
+			max-width: 300px;
+			padding: 0 50px;
+
+			textarea {
+				width: 100%;
+				display: block;
+				position: relative;
+			}
+		}
+
+		.upload-avatar {
+			display: table;
+			margin: 0 auto;
+			border: 2px solid #9a9a9a;
+			border-style: dashed;
+			padding: 10px;
+			cursor: pointer;
+
+			.ant-avatar {
+				border-radius: 0;
+			}
+		}
+	}
+}

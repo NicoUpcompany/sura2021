@@ -1,0 +1,38 @@
+footer {
+	float: left;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 15px 50px;
+	.logo {
+		width: 80%;
+		max-width: 200px;
+		min-width: 100px;
+		padding: 0 20px;
+	}
+	a {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: #fff;
+		font-weight: 500;
+		font-size: 18px;
+		&:hover {
+			color: #fff;
+		}
+		img {
+			margin-left: 15px;
+		}
+	}
+}
+@media only screen and (min-width: 320px) and (max-width: 719px) {
+	footer {
+		flex-direction: column;
+		padding: 30px 50px;
+		height: auto;
+		a {
+			margin-top: 20px;
+		}
+	}
+}

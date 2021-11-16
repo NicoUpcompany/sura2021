@@ -1,0 +1,25 @@
+.general {
+    position: relative;
+    display: block;
+    margin: auto;
+    
+    .button {
+        position: relative;
+        display: block;
+        margin: 0 auto 20px;
+        
+        button {
+            position: relative;
+            display: block;
+            margin: 0 auto;
+            min-width: 170px;
+            border: none;
+        }
+    }
+
+    .block-picker {
+        position: relative;
+        display: block;
+        margin: 0 auto 20px;
+    }
+}

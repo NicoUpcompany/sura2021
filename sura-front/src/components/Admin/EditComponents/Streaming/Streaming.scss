@@ -1,0 +1,28 @@
+.streaming {
+    position: relative;
+    display: block;
+    margin: auto;
+
+    .button-page {
+        position: relative;
+        display: block;
+        margin: 0 calc(100% - 200px) 50px;
+    }
+    
+    .form-edit {
+        position: relative;
+        display: block;
+        margin: 0 auto;
+
+        .colors {
+            margin: 0 0 30px;
+        }
+        
+        button {
+            position: relative;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
+}

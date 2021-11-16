@@ -1,0 +1,74 @@
+.admin-poll {
+	position: relative;
+	display: block;
+	margin: 0 auto;
+	min-height: 350px;
+
+	.ant-row {
+		margin-bottom: 20px;
+	}
+
+	.container-table {
+		position: relative;
+		display: block;
+		margin: 0 auto;
+
+		.ant-table {
+			margin-top: 50px;
+		}
+
+		.ant-btn {
+			margin: 0 20px;
+			position: absolute;
+			right: 0;
+			max-width: 300px;
+		}
+	}
+
+	.container {
+		position: relative;
+		display: block;
+		margin: 0 auto;
+
+		.title {
+			position: relative;
+			display: block;
+			margin: 0 auto 50px;
+			text-align: center;
+		}
+
+		.ant-picker{
+			margin: 0 auto 20px;
+			position: relative;
+			display: block;
+			max-width: 200px;
+		}
+	}
+}
+
+.ant-modal-body {
+	.container-poll {
+		position: relative;
+		display: block;
+		margin: 0 auto;
+
+		.ant-row {
+			margin-bottom: 20px;
+		}
+
+		.title {
+			position: relative;
+			display: block;
+			margin: 0 auto 20px;
+			text-align: center;
+		}
+
+		.ant-picker{
+			margin: 0 auto 20px;
+			position: relative;
+			display: -ms-inline-flexbox;
+    		display: inline-flex;
+			max-width: none;
+		}
+	}
+}

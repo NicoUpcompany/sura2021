@@ -1,0 +1,246 @@
+.fondo2 {
+	.header2 {
+		float: left;
+		width: 100%;
+		height: 100px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0px 50px;
+		.desktop {
+			display: flex;
+		}
+		.movil {
+			display: none;
+		}
+		
+		.logo img {
+			width: 80%;
+			max-width: 300px;
+			min-width: 100px;
+		}
+
+		.menu {
+			float: left;
+			width: 60%;
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+
+			a {
+				color: #fff !important;
+				font-weight: bold;
+				margin-left: 50px;
+				background: #a942ea;
+				padding: 10px 30px;
+				&:hover {
+					background: #7357de;
+					color: #fff;
+				}
+			}
+
+			.perfil {
+				color: #fff !important;
+				font-weight: bold;
+			}
+
+			.btn {
+				background: linear-gradient(#ff7c7b, #ffc160);
+				cursor: pointer;
+				color: white !important;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 20%;
+				border-radius: 5px !important;
+				height: 30px;
+				border: none;
+				border-radius: 0px;
+				letter-spacing: 1px;
+				font-weight: bold;
+				font-size: 14px;
+			}
+		}
+	}
+}
+// .MuiCheckbox-root {
+// 	color: #fff !important;
+// }
+.perfil2 {
+	float: left;
+	width: 100%;
+	padding: 50px;
+
+	.calendario {
+		float: left;
+		width: 280px;
+
+		.card {
+			float: left;
+			width: 100%;
+			height: calc(100vh - 140px);
+			border: 1px solid #dbdce1;
+			border-radius: 5px;
+			h2 {
+				padding-left: 20px;
+				padding-top: 20px;
+				font-size: 10px;
+				color: black;
+			}
+
+			h1 {
+				padding-left: 20px;
+				padding-bottom: 5px;
+				font-size: 16px;
+				color: black;
+				font-weight: bold;
+			}
+
+			.flechas {
+				// float: left;
+				width: 100%;
+				border-bottom: 1px solid #dbdce1;
+				padding: 20px;
+				display: flex;
+				justify-content: space-between;
+				margin: 0;
+
+				.icono {
+					cursor: pointer;
+				}
+			}
+
+			.letras {
+				float: left;
+				width: 100%;
+				border-bottom: 1px solid #dbdce1;
+			}
+
+			.horas {
+				float: left;
+				width: 100%;
+				padding: 0 20px;
+				overflow-y: auto;
+				height: calc(100vh - 315px);
+
+				.horas {
+					button {
+						&:hover {
+							background: white;
+							color: #8484ff;
+						}
+
+						&:focus {
+							background: white;
+							color: #8484ff;
+							transform: scale(1);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.horasTomadas {
+		float: left;
+		width: calc(100% - 300px);
+		margin-left: 20px;
+
+		.icono {
+			font-size: 14px;
+			color: black;
+		}
+
+		.pedidas {
+			float: left;
+			width: 100%;
+
+			.col {
+				float: left;
+				width: calc((100% / 2) - (20px / 2));
+				margin-right: 20px;
+				-webkit-box-shadow: 0px 14px 30px -31px rgba(0, 0, 0, 0.78);
+				-moz-box-shadow: 0px 14px 30px -31px rgba(0, 0, 0, 0.78);
+				box-shadow: 0px 14px 30px -31px rgba(0, 0, 0, 0.78);
+				margin-bottom: 20px;
+				padding: 20px;
+				border: 1px solid #dbdce1;
+				border-radius: 10px;
+
+				&:nth-child(2n) {
+					margin-right: 0px;
+				}
+
+				strong {
+					font-size: 16px;
+					font-weight: bold;
+				}
+
+				p {
+					color: #999999;
+					margin: 0px;
+				}
+
+				.botones {
+					.button {
+						background: white;
+						color: #ff7777;
+						font-weight: bold;
+						text-transform: uppercase;
+						box-shadow: none;
+						width: auto !important;
+						padding-left: 0px;
+						padding-right: 0px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 320px) and (max-width: 719px) {
+	.fondo2 {
+		.header {
+			.desktop {
+				display: none;
+			}
+
+			.movil {
+				display: flex;
+			}
+		}
+	}
+
+	.perfil2 {
+		padding: 50px 20px;
+
+		.horasTomadas {
+			float: left;
+			width: calc(100%);
+			margin-left: 0px;
+			margin-top: 50px;
+
+			.pedidas {
+				.col {
+					float: left;
+					width: calc((100%));
+					margin-right: 0px;
+					overflow: hidden;
+				}
+			}
+		}
+
+		.calendario {
+			float: left;
+			width: 100%;
+
+			.card {
+				height: calc(100vh);
+
+				.horas {
+					height: calc(100vh - 163px);
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,44 @@
+.admin-agenda {
+	position: relative;
+	display: block;
+	margin: 0 auto;
+	min-height: 350px;
+
+	.container-table {
+		position: relative;
+		display: block;
+		margin: 0 auto;
+
+		.ant-table {
+			margin-top: 50px;
+		}
+
+		.ant-btn {
+			margin: 0 20px;
+			position: absolute;
+			right: 0;
+			max-width: 200px;
+		}
+	}
+
+	.container {
+		position: relative;
+		display: block;
+		margin: 0 auto;
+
+		.title {
+			position: relative;
+			display: block;
+			margin: 0 auto 50px;
+			text-align: center;
+		}
+
+		.ant-picker,
+		.ant-btn {
+			margin: 0 auto 20px;
+			position: relative;
+			display: block;
+			max-width: 200px;
+		}
+	}
+}

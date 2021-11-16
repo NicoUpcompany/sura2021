@@ -1,0 +1,167 @@
+@import "../../../../scss/index.scss";
+
+.max-container-sign-in {
+    width: 100%;
+    margin: 0 auto;
+    border: 5px dashed #ccc;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    .pane-code-sign-in-admin {
+        width: 100%;
+	    float: left;
+    }
+    
+    .fondo-signin-admin {
+        float: left;
+        width: 100%;
+        height: 100vh;
+    
+        .contenedorRegistro {
+            float: left;
+            width: 100%;
+            position: relative;
+            background-size: cover;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            height: auto;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            .cognitiva {
+                position: absolute;
+                bottom: 30px;
+                right: 30px;
+            }
+            .seguro {
+                position: absolute;
+                left: 0px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            .row {
+                float: left;
+                width: 100%;
+                max-width: 460px;
+    
+                .form {
+                    float: left;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    padding: 0px 20px;
+                    .titulo {
+                        width: calc(100%);
+                        max-width: 500px;
+                        margin-bottom: 50px;
+                    }
+                    span {
+                        margin: 0px 0px 0px;
+                    }
+    
+                    h1 {
+                        margin: 20px 0px 0px;
+                    }
+    
+                    .login {
+                        color: white;
+                        font-weight: 400;
+                        margin: 0px !important;
+                        font-size: 16px;
+                        float: left;
+                        width: 100%;
+                        text-align: center;
+                        letter-spacing: 1px;
+                        margin-bottom: 20px !important;
+                    }
+    
+                    .cronometro {
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+                        margin: 0px 0px 20px;
+    
+                        div {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+    
+                            h1 {
+                                margin: 0px;
+                            }
+    
+                            span {
+                                margin: 0px;
+                                font-weight: 600;
+                            }
+                        }
+                    }
+    
+                    .card {
+                        background: white;
+                        padding: 30px;
+                        width: 100%;
+                        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.button-code {
+    position: relative;
+    display: block;
+    left: 88%;
+    background-color: #4363AC;
+    color: white;
+    
+    &:hover {
+        background-color: #001529;
+        color: white;
+    }
+}
+
+.buttons {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    height: 20px;
+
+    .buttons-container {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 100px;
+        margin: 0 auto;
+        color: #fff;
+        background-color: #4363AC;
+        width: 100%;
+        max-width: 600px;
+        text-align: center;
+        clip-path: polygon(8% 0, 92% 0, 100% 100%, 0% 100%);
+        cursor: pointer;
+        border-radius: 8px;
+    }
+
+    .buttons-container-edit {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        padding: 0 100px;
+        margin: 0 auto;
+        color: #fff;
+        background-color: #0000a2;
+        width: 100%;
+        max-width: 500px;
+        text-align: center;
+        clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+        cursor: pointer;
+    }
+}

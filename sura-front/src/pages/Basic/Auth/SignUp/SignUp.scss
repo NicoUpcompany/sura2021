@@ -1,0 +1,297 @@
+.row {
+	float: left;
+	width: 100%;
+	display: flex;
+}
+.col3 {
+	float: left;
+	// min-width: 480px;
+	// background-image: url(../../../../assets/img/fondoRegistro.svg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	// min-height: 100vh;
+	position: relative;
+	// overflow: hidden;
+	// height: 720px;
+	img {
+		height: 100vh;
+	}
+
+	.logo {
+		position: absolute;
+		bottom: 50px;
+		left: 50px;
+	}
+	.fondoMovil {
+		display: none;
+	}
+	.fecha {
+		position: absolute;
+		top: 58%;
+		left: 50px;
+		transform: translateY(-50%);
+		max-width: 600px;
+		width: 70%;
+	}
+	.titulo {
+		position: absolute;
+		top: 27%;
+		left: 50%;
+		width: calc(100% - 100px);
+		max-width: 400px;
+		transform: translate(-50%, -50%);
+	}
+}
+.col4 {
+	float: left;
+	width: calc(100%);
+	padding: 80px;
+	flex-direction: column;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+
+	a {
+		position: relative;
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+.no-top-agenda {
+	border: none !important;
+}
+
+.agenda-container {
+	position: relative;
+	display: block;
+	width: 100%;
+	min-height: 100vh;
+	float: left;
+	border-top: 5px solid #002f67;
+
+	.section-1 {
+		position: relative;
+		display: block;
+		background-color: #f8f9fa;
+		padding: 100px 0;
+
+		.about {
+			margin: 0 auto;
+			width: 100%;
+			max-width: 1000px;
+
+			h3 {
+				font-family: "Montserrat" !important;
+				font-weight: bold;
+				font-size: 20px;
+				color: #161853;
+				margin-bottom: 20px;
+			}
+
+			p {
+				font-family: "Montserrat" !important;
+				font-weight: bold;
+				font-size: 14px;
+				color: #666666;
+				margin-bottom: 50px;
+			}
+		}
+	}
+
+	.section-2 {
+		position: relative;
+		display: table;
+		width: 100%;
+		padding: 75px 0;
+
+		.grey {
+			background-color: #f8f9fa !important;
+		}
+
+		.exponentes {
+			margin: 0 auto;
+			width: 100%;
+			width: 1000px;
+
+			h3 {
+				font-family: "Montserrat" !important;
+				font-weight: bold;
+				font-size: 20px;
+				color: #161853;
+				margin-bottom: 20px;
+			}
+
+			.description {
+				border: 1px solid #f1f5f7;
+				padding: 20px;
+
+				.icon {
+					float: left;
+					width: 80px;
+					height: 80px;
+					border-radius: 200px;
+					margin-bottom: 10px;
+					margin-right: 15px;
+				}
+				.nombrecolaborador {
+					color: #616161 !important;
+					font-size: 16px !important;
+					text-align: left;
+					margin-left: 20px;
+					padding-left: 75px;
+
+					span {
+						font-family: "Montserrat" !important;
+						color: #666666;
+						padding: 10px 0;
+					}
+
+					.ultimo {
+						font-weight: 500;
+					}
+
+					.res {
+						margin-left: 75px;
+					}
+				}
+			}
+
+			.footerRegistro {
+				max-width: 1000px;
+			}
+		}
+	}
+}
+
+.user {
+	background-image: url("../../../../assets/img/speakers/default-user-img.jpg");
+	background-position: center center;
+	background-size: cover;
+}
+
+.pabloGonzalia {
+	background-image: url("../../../../assets/images/Pablo\ Gonzalía\ bn.jpg");
+	background-position: center center;
+	background-size: cover;
+}
+
+.antonioCastillo {
+	background-image: url("../../../../assets/images/Antonio\ Castillo.\ bnjpg.jpg");
+	background-position: center center;
+	background-size: cover;
+}
+
+.enriqueAlvarez {
+	background-image: url("../../../../assets/images/enrique_alvarez.jpeg");
+	background-position: center center;
+	background-size: cover;
+}
+
+.rocioCossini {
+	background-image: url("../../../../assets/images/Rocio\ Cossini_bn.jpg");
+	background-position: center top 145px;
+	background-size: cover;
+}
+
+.footer-sign-up {
+	position: relative;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	width: 100%;
+	background-color: #f8f9fa;
+	min-height: 100px;
+
+	a {
+		color: #000;
+
+		&:hover {
+			color: #000 !important;
+		}
+	}
+}
+
+@media only screen and (min-width: 320px) and (max-width: 790px) {
+	.row {
+		float: left;
+		width: 100%;
+		display: flex;
+		flex-direction: column !important;
+	}
+	.col3 {
+		float: left;
+		width: 100%;
+		position: relative;
+		img {
+			width: 100%;
+			height: auto !important;
+		}
+		.logo {
+			position: absolute;
+			bottom: 20px;
+			left: 20px;
+			width: 120px;
+		}
+		.fondoMovil {
+			display: block;
+			float: left;
+			width: 100%;
+		}
+	}
+	.col4 {
+		float: left;
+		width: 100%;
+		padding: 20px 20px 50px;
+		flex-direction: column;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: auto;
+		h2 {
+			text-align: left;
+			font-weight: bold;
+			font-size: 32px;
+			line-height: 17px;
+			letter-spacing: -0.02em;
+			width: 100%;
+			max-width: 1000px;
+		}
+		p {
+			font-weight: 400;
+			font-size: 16px;
+			color: black;
+			width: 100%;
+			max-width: 1000px;
+		}
+		a {
+			width: 100%;
+			max-width: 1000px;
+		}
+	}
+	.agenda-container {
+		.section-1 {
+			h3,
+			p {
+				margin: 0 20px;
+			}
+		}
+		.section-2 {
+			h3 {
+				margin: 0 20px;
+			}
+
+			.exponentes {
+				width: 100%;
+				max-width: none;
+
+				.footerRegistro {
+					width: 100%;
+					max-width: none;
+				}
+			}
+		}
+	}
+}
