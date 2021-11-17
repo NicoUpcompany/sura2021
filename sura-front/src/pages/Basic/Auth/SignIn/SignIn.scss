@@ -1,136 +1,37 @@
 @import "../../../../scss/index.scss";
 
-.container-sign-in {
-    width: 100%;
-    margin: 0 auto;
-    height: 100vh;
-	background-image: url("../../../../assets/img/fondoExito.png");
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-    overflow-y: auto;
-    overflow-x: hidden;
-
-	.pane-sign-in {
-		width: 100%;
-		float: left;
-	}
+.cronometro{
+	float: left;
+	width: 100%;	
+	display: flex;
+	justify-content: space-between;
+	font-family: 'Barlow', sans-serif;
 	
-	.fondo {
-		float: left;
-		width: 100%;
-	
-		.contenedorRegistro {
-			float: left;
-			width: 100%;
-			position: relative;
-			background-size: cover;
-			background-repeat: no-repeat;
-			min-height: 100vh;
-			height: auto;
-			overflow: hidden;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			padding: 20px;
-			.cognitiva {
-				position: absolute;
-				bottom: 30px;
-				right: 30px;
-			}
-			.seguro {
-				position: absolute;
-				left: 0px;
-				top: 50%;
-				transform: translateY(-50%);
-			}
-			.row {
-				float: left;
-				width: 100%;
-				max-width: 460px;
-				// position: absolute;
-				// top: 50%;
-				// left: 50%;
-				// transform: translate(-50%, -50%);
-	
-				.form {
-					float: left;
-					width: 100%;
-					display: flex;
-					align-items: center;
-					flex-direction: column;
-					padding: 0px 20px;
-					.titulo {
-						width: calc(100%);
-						max-width: 250px;
-						margin-bottom: 50px;
-					}
-					span {
-						margin: 0px 0px 0px;
-					}
-	
-					h1 {
-						margin: 20px 0px 0px;
-					}
-	
-					.login {
-						color: white;
-						font-weight: 400;
-						margin: 0px !important;
-						font-size: 16px;
-						float: left;
-						width: 100%;
-						text-align: center;
-						letter-spacing: 1px;
-						margin-bottom: 20px !important;
-					}
-	
-					.cronometro {
-						width: 100%;
-						display: flex;
-						justify-content: space-around;
-						align-items: center;
-						margin: 0px 0px 20px;
-						color: white !important;
-	
-						div {
-							/* flex: 1 1 1; */
-							display: flex;
-							flex-direction: column;
-							justify-content: center;
-							align-items: center;
-	
-							h1 {
-								margin: 0px;
-								color: white !important;
-							}
-	
-							span {
-								margin: 0px;
-								font-weight: 600;
-							}
-						}
-					}
-	
-					.card {
-						background: white;
-						padding: 30px;
-						width: 100%;
-						box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-					}
-				}
-			}
-		}
+	h1{
+		background: #fff;
+		padding: 0;
+		text-align: center;
+		width: 100px;
+		line-height: 100px;
+		margin: 0;
+		border-radius: 20px;
+		color: #00AEC7;
+		font-size: 30px;
+		font-family: 'Barlow', sans-serif;
+		font-weight: 600;
 	}
 }
-
-
-@media only screen and (min-width: 320px) and (max-width: 790px) {
-	.container-sign-in {
-		.fondo {
-			.contenedorRegistro {
-				padding: 20px 20px 120px !important;
-			}
-		}
+.m2 {
+	.campos{
+		margin-top: 20px !important;
+	}
+	h2{
+		margin-top: 20px !important;
+	}
+}
+@media only screen and (min-width: 320px) and (max-width: 1024px) {
+	.cronometro h1{
+		width: 70px;
+		line-height: 70px;
 	}
 }

@@ -36,10 +36,10 @@ import { getFullPollApi, postPollAnswerApi } from "../../../api/Admin/poll";
 
 import cerrar from "../../../assets/img/cerrar.svg";
 
-import logo2 from '../../../assets/images/stand/logo.png';
-import banner from '../../../assets/images/stand/banner.png';
-import logoAsic from '../../../assets/images/logoAsic.png'
-import logoCopeuch from '../../../assets/images/LogoCopeuch.png'
+// import logo2 from '../../../assets/images/stand/logo.png';
+// import banner from '../../../assets/images/stand/banner.png';
+// import logoAsic from '../../../assets/images/logoAsic.png'
+// import logoCopeuch from '../../../assets/images/LogoCopeuch.png'
 
 import "./Streaming.scss";
 
@@ -852,8 +852,9 @@ const Streaming = () => {
 							{/* <img
 								src="https://res.cloudinary.com/developer-gallardo/image/upload/v1624393937/logo-footer_ag4knz.png"
 								alt="logo1"
-							/> */}
+							/> 
 							<img src={logo2} alt="logo2" />
+							*/}
 							{config.networking &&
 							!isSafari &&
 							!isMobileSafari ? (
@@ -1037,6 +1038,7 @@ const Streaming = () => {
 							{standsData.map((item, i) => {
 								return (
 									<div className="col-2" key={i}>
+										{/* 
 										<img
 											// src={`${basePath}/${apiVersion}/stand-image/${item.logoExt}`}
 											src={banner}
@@ -1047,6 +1049,7 @@ const Streaming = () => {
 												handleClickAbrir(item.name)
 											}
 										/>
+										*/}
 									</div>
 								);
 							})}
@@ -1161,7 +1164,7 @@ const Streaming = () => {
 							/>
 						</div>
 					</div>
-				</div>  */}
+				</div>  
 				{config.agenda ? (
 					<Agenda
 						agendaTitle={config.agendaText}
@@ -1192,6 +1195,8 @@ const Streaming = () => {
 						/>
 					</div>
 				</div>
+
+				*/}
 
 			</div>
 			{config.stand ? (

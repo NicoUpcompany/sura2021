@@ -402,13 +402,6 @@ const RegisterForm = (props) => {
 			setLoading(false);
 			statusFunction = false;
 		}
-		if (valEmail != valEmail2) {
-			notification["error"]({
-				message: "Los correos no son identicos",
-			});
-			setLoading(false);
-			statusFunction = false;
-		}
 		if (statusFunction) {
 			const result = await signUpApi(inputs);
 			if (!result.ok) {
@@ -438,517 +431,94 @@ const RegisterForm = (props) => {
 
 	return (
 		<>
+
 			{stateForm ? (
 				<Form onChange={changeForm} onFinish={SignUp}>
-					{data.fullName ? (
-						<div
-							className={`${
-								!even && lastOdd === "fullName"
-									? "odd"
-									: "mitad"
-							}`}
-						>
-							<TextField
-								id="name"
-								type="text"
-								name="fullName"
-								label="Nombre Completo"
-								variant="filled"
-								value={inputs.fullName}
-								onChange={inputValidation}
-							/>
-						</div>
-					) : null}
-					{data.name ? (
-						<div
-							className={`${
-								!even && lastOdd === "name" ? "odd" : "mitad"
-							}`}
-						>
-							<TextField
+					<div className="campo">
+						<div className="m">
+							<input
 								id="name"
 								type="text"
 								name="name"
-								label="Nombre"
+								placeholder="Nombre"
 								variant="filled"
 								value={inputs.name}
 								onChange={inputValidation}
 							/>
 						</div>
-					) : null}
-					{data.lastname ? (
-						<div
-							className={`${
-								!even && lastOdd === "lastname"
-									? "odd"
-									: "mitad"
-							}`}
-						>
-							<TextField
+						<div className="m">
+							<input
 								id="lastname"
 								type="text"
 								name="lastname"
-								label="Apellido"
+								placeholder="Apellido"
 								variant="filled"
 								value={inputs.lastname}
 								onChange={inputValidation}
 							/>
 						</div>
-					) : null}
-					{data.email ? (
-						<>
-						<div
-							className={`${
-								!even && lastOdd === "email" ? "odd" : "mitad"
-							}`}
-						>
-							<TextField
+					</div>
+
+					<div className="campo">
+						<div className="m">
+							<input
 								id="email"
 								type="email"
 								name="email"
-								label="Correo"
+								placeholder="Mail"
 								variant="filled"
 								value={inputs.email}
 								onChange={inputValidation}
 							/>
 						</div>
-						<div className={`${!even && lastOdd === "email" ? "odd" : "mitad"}`}>
-							<TextField
-								id="email2"
-								type="email"
-								name="email2"
-								label="Confirma tu correo"
-								variant="filled"
-								value={inputs.email2}
-								onChange={inputValidation}
-							/>
-						</div>
-						</>
-					) : null}
-					{data.rut ? (
-						<div
-							className={`${
-								!even && lastOdd === "rut" ? "odd" : "mitad"
-							}`}
-						>
-							<TextField
-								id="rut"
-								type="text"
-								name="rut"
-								label="Rut"
-								variant="filled"
-								value={inputs.rut}
-								onChange={inputValidation}
-							/>
-						</div>
-					) : null}
-					{data.enterprise ? (
-						<div
-							className={`${
-								!even && lastOdd === "enterprise"
-									? "odd"
-									: "mitad"
-							}`}
-						>
-							<TextField
-								id="enterprise"
-								type="text"
-								name="enterprise"
-								label="Empresa"
-								variant="filled"
-								value={inputs.enterprise}
-								onChange={inputValidation}
-							/>
-						</div>
-					) : null}
-					{data.position ? (
-						<div
-							className={`${
-								!even && lastOdd === "position"
-									? "odd"
-									: "mitad"
-							}`}
-						>
-							<TextField
-								id="position"
-								type="text"
-								name="position"
-								label="Cargo"
-								variant="filled"
-								value={inputs.position}
-								onChange={inputValidation}
-							/>
-						</div>
-					) : null}
-					{data.phone ? (
-						<div
-							className={`${
-								!even && lastOdd === "phone" ? "odd" : "mitad"
-							}`}
-						>
-							<TextField
+						<div className="m tel">
+							<span>+56</span>
+							<input
 								id="phone"
 								type="text"
 								name="phone"
-								label="Teléfono"
+								placeholder="Teléfono"
 								variant="filled"
 								value={inputs.phone}
 								onChange={inputValidation}
 							/>
 						</div>
-					) : null}
-					{data.country ? (
-						<div
-							className={`${
-								!even && lastOdd === "country" ? "odd" : "mitad"
-							}`}
-						>
-							<Select
-								showSearch
-								style={{
-									width: "100%",
-								}}
-								placeholder="País"
-								optionFilterProp="children"
-								onChange={onChangeCountry}
-								filterOption={(input, option) =>
-									option.children
-										.toLowerCase()
-										.indexOf(input.toLowerCase()) >= 0
-								}
-							>
-								<Option value="Afganistán">Afganistán</Option>
-								<Option value="Albania">Albania</Option>
-								<Option value="Alemania">Alemania</Option>
-								<Option value="Andorra">Andorra</Option>
-								<Option value="Angola">Angola</Option>
-								<Option value="Antigua y Barbuda">
-									Antigua y Barbuda
-								</Option>
-								<Option value="Arabia Saudita">
-									Arabia Saudita
-								</Option>
-								<Option value="Argelia">Argelia</Option>
-								<Option value="Argentina">Argentina</Option>
-								<Option value="Armenia">Armenia</Option>
-								<Option value="Australia">Australia</Option>
-								<Option value="Austria">Austria</Option>
-								<Option value="Azerbaiyán">Azerbaiyán</Option>
-								<Option value="Bahamas">Bahamas</Option>
-								<Option value="Bangladés">Bangladés</Option>
-								<Option value="Barbados">Barbados</Option>
-								<Option value="Baréin">Baréin</Option>
-								<Option value="Bélgica">Bélgica</Option>
-								<Option value="Belice">Belice</Option>
-								<Option value="Benín">Benín</Option>
-								<Option value="Bielorrusia">Bielorrusia</Option>
-								<Option value="Birmania">Birmania</Option>
-								<Option value="Bolivia">Bolivia</Option>
-								<Option value="Bosnia y Herzegovina">
-									Bosnia y Herzegovina
-								</Option>
-								<Option value="Botsuana">Botsuana</Option>
-								<Option value="Brasil">Brasil</Option>
-								<Option value="Brunéi">Brunéi</Option>
-								<Option value="Bulgaria">Bulgaria</Option>
-								<Option value="Burkina Faso">
-									Burkina Faso
-								</Option>
-								<Option value="Burundi">Burundi</Option>
-								<Option value="Bután">Bután</Option>
-								<Option value="Cabo Verde">Cabo Verde</Option>
-								<Option value="Camboya">Camboya</Option>
-								<Option value="Camerún">Camerún</Option>
-								<Option value="Canadá">Canadá</Option>
-								<Option value="Catar">Catar</Option>
-								<Option value="Chad">Chad</Option>
-								<Option value="Chile">Chile</Option>
-								<Option value="China">China</Option>
-								<Option value="Chipre">Chipre</Option>
-								<Option value="Ciudad del Vaticano">
-									Ciudad del Vaticano
-								</Option>
-								<Option value="Colombia">Colombia</Option>
-								<Option value="Comoras">Comoras</Option>
-								<Option value="Corea del Norte">
-									Corea del Norte
-								</Option>
-								<Option value="Corea del Sur">
-									Corea del Sur
-								</Option>
-								<Option value="Costa de Marfil">
-									Costa de Marfil
-								</Option>
-								<Option value="Costa Rica">Costa Rica</Option>
-								<Option value="Croacia">Croacia</Option>
-								<Option value="Cuba">Cuba</Option>
-								<Option value="Dinamarca">Dinamarca</Option>
-								<Option value="Dominica">Dominica</Option>
-								<Option value="Ecuador">Ecuador</Option>
-								<Option value="Egipto">Egipto</Option>
-								<Option value="El Salvador">El Salvador</Option>
-								<Option value="Emiratos Árabes Unidos">
-									Emiratos Árabes Unidos
-								</Option>
-								<Option value="Eritrea">Eritrea</Option>
-								<Option value="Eslovaquia">Eslovaquia</Option>
-								<Option value="Eslovenia">Eslovenia</Option>
-								<Option value="España">España</Option>
-								<Option value="Estados Unidos">
-									Estados Unidos
-								</Option>
-								<Option value="Estonia">Estonia</Option>
-								<Option value="Etiopía">Etiopía</Option>
-								<Option value="Filipinas">Filipinas</Option>
-								<Option value="Finlandia">Finlandia</Option>
-								<Option value="Fiyi">Fiyi</Option>
-								<Option value="Francia">Francia</Option>
-								<Option value="Gabón">Gabón</Option>
-								<Option value="Gambia">Gambia</Option>
-								<Option value="Georgia">Georgia</Option>
-								<Option value="Ghana">Ghana</Option>
-								<Option value="Granada">Granada</Option>
-								<Option value="Grecia">Grecia</Option>
-								<Option value="Guatemala">Guatemala</Option>
-								<Option value="Guyana">Guyana</Option>
-								<Option value="Guinea">Guinea</Option>
-								<Option value="Guinea ecuatorial">
-									Guinea ecuatorial
-								</Option>
-								<Option value="Guinea-Bisáu">
-									Guinea-Bisáu
-								</Option>
-								<Option value="Haití">Haití</Option>
-								<Option value="Honduras">Honduras</Option>
-								<Option value="Hungría">Hungría</Option>
-								<Option value="India">India</Option>
-								<Option value="Indonesia">Indonesia</Option>
-								<Option value="Irak">Irak</Option>
-								<Option value="Irán">Irán</Option>
-								<Option value="Irlanda">Irlanda</Option>
-								<Option value="Islandia">Islandia</Option>
-								<Option value="Islas Marshall">
-									Islas Marshall
-								</Option>
-								<Option value="Islas Salomón">
-									Islas Salomón
-								</Option>
-								<Option value="Israel">Israel</Option>
-								<Option value="Italia">Italia</Option>
-								<Option value="Jamaica">Jamaica</Option>
-								<Option value="Japón">Japón</Option>
-								<Option value="Jordania">Jordania</Option>
-								<Option value="Kazajistán">Kazajistán</Option>
-								<Option value="Kenia">Kenia</Option>
-								<Option value="Kirguistán">Kirguistán</Option>
-								<Option value="Kiribati">Kiribati</Option>
-								<Option value="Kuwait">Kuwait</Option>
-								<Option value="Laos">Laos</Option>
-								<Option value="Lesoto">Lesoto</Option>
-								<Option value="Letonia">Letonia</Option>
-								<Option value="Líbano">Líbano</Option>
-								<Option value="Liberia">Liberia</Option>
-								<Option value="Libia">Libia</Option>
-								<Option value="Liechtenstein">
-									Liechtenstein
-								</Option>
-								<Option value="Lituania">Lituania</Option>
-								<Option value="Luxemburgo">Luxemburgo</Option>
-								<Option value="Macedonia del Norte">
-									Macedonia del Norte
-								</Option>
-								<Option value="Madagascar">Madagascar</Option>
-								<Option value="Malasia">Malasia</Option>
-								<Option value="Malaui">Malaui</Option>
-								<Option value="Maldivas">Maldivas</Option>
-								<Option value="Malí">Malí</Option>
-								<Option value="Malta">Malta</Option>
-								<Option value="Marruecos">Marruecos</Option>
-								<Option value="Mauricio">Mauricio</Option>
-								<Option value="Mauritania">Mauritania</Option>
-								<Option value="México">México</Option>
-								<Option value="Micronesia">Micronesia</Option>
-								<Option value="Moldavia">Moldavia</Option>
-								<Option value="Mónaco">Mónaco</Option>
-								<Option value="Mongolia">Mongolia</Option>
-								<Option value="Montenegro">Montenegro</Option>
-								<Option value="Mozambique">Mozambique</Option>
-								<Option value="Namibia">Namibia</Option>
-								<Option value="Nauru">Nauru</Option>
-								<Option value="Nepal">Nepal</Option>
-								<Option value="Nicaragua">Nicaragua</Option>
-								<Option value="Níger">Níger</Option>
-								<Option value="Nigeria">Nigeria</Option>
-								<Option value="Noruega">Noruega</Option>
-								<Option value="Nueva Zelanda">
-									Nueva Zelanda
-								</Option>
-								<Option value="Omán">Omán</Option>
-								<Option value="Países Bajos">
-									Países Bajos
-								</Option>
-								<Option value="Pakistán">Pakistán</Option>
-								<Option value="Palaos">Palaos</Option>
-								<Option value="Panamá">Panamá</Option>
-								<Option value="Papúa Nueva Guinea">
-									Papúa Nueva Guinea
-								</Option>
-								<Option value="Paraguay">Paraguay</Option>
-								<Option value="Perú">Perú</Option>
-								<Option value="Polonia">Polonia</Option>
-								<Option value="Portugal">Portugal</Option>
-								<Option value="Reino Unido">Reino Unido</Option>
-								<Option value="República Centroafricana">
-									República Centroafricana
-								</Option>
-								<Option value="República Checa">
-									República Checa
-								</Option>
-								<Option value="República del Congo">
-									República del Congo
-								</Option>
-								<Option value="República Democrática del Congo">
-									República Democrática del Congo
-								</Option>
-								<Option value="República Dominicana">
-									República Dominicana
-								</Option>
-								<Option value="Ruanda">Ruanda</Option>
-								<Option value="Rumanía">Rumanía</Option>
-								<Option value="Rusia">Rusia</Option>
-								<Option value="Samoa">Samoa</Option>
-								<Option value="San Cristóbal y Nieves">
-									San Cristóbal y Nieves
-								</Option>
-								<Option value="San Marino">San Marino</Option>
-								<Option value="San Vicente y las Granadinas">
-									San Vicente y las Granadinas
-								</Option>
-								<Option value="Santa Lucía">Santa Lucía</Option>
-								<Option value="Santo Tomé y Príncipe">
-									Santo Tomé y Príncipe
-								</Option>
-								<Option value="Senegal">Senegal</Option>
-								<Option value="Serbia">Serbia</Option>
-								<Option value="Seychelles">Seychelles</Option>
-								<Option value="Sierra Leona">
-									Sierra Leona
-								</Option>
-								<Option value="Singapur">Singapur</Option>
-								<Option value="Siria">Siria</Option>
-								<Option value="Somalia">Somalia</Option>
-								<Option value="Sri Lanka">Sri Lanka</Option>
-								<Option value="Suazilandia">Suazilandia</Option>
-								<Option value="Sudáfrica">Sudáfrica</Option>
-								<Option value="Sudán">Sudán</Option>
-								<Option value="Sudán del Sur">
-									Sudán del Sur
-								</Option>
-								<Option value="Suecia">Suecia</Option>
-								<Option value="Suiza">Suiza</Option>
-								<Option value="Surinam">Surinam</Option>
-								<Option value="Tailandia">Tailandia</Option>
-								<Option value="Tanzania">Tanzania</Option>
-								<Option value="Tayikistán">Tayikistán</Option>
-								<Option value="Timor Oriental">
-									Timor Oriental
-								</Option>
-								<Option value="Togo">Togo</Option>
-								<Option value="Tonga">Tonga</Option>
-								<Option value="Trinidad y Tobago">
-									Trinidad y Tobago
-								</Option>
-								<Option value="Túnez">Túnez</Option>
-								<Option value="Turkmenistán">
-									Turkmenistán
-								</Option>
-								<Option value="Turquía">Turquía</Option>
-								<Option value="Tuvalu">Tuvalu</Option>
-								<Option value="Ucrania">Ucrania</Option>
-								<Option value="Uganda">Uganda</Option>
-								<Option value="Uruguay">Uruguay</Option>
-								<Option value="Uzbekistán">Uzbekistán</Option>
-								<Option value="Vanuatu">Vanuatu</Option>
-								<Option value="Venezuela">Venezuela</Option>
-								<Option value="Vietnam">Vietnam</Option>
-								<Option value="Yemen">Yemen</Option>
-								<Option value="Yibuti">Yibuti</Option>
-								<Option value="Zambia">Zambia</Option>
-								<Option value="Zimbabue">Zimbabue</Option>
-							</Select>
-						</div>
-					) : null}
-					{data.adress ? (
-						<div
-							className={`${
-								!even && lastOdd === "adress" ? "odd" : "mitad"
-							}`}
-						>
-							<TextField
-								id="adress"
+					</div>
+
+					<div className="campo">
+						<div className="m">
+							<input
+								id="enterprise"
 								type="text"
-								name="adress"
-								label="Dirección"
+								name="enterprise"
+								placeholder="Empresa/Institución"
 								variant="filled"
-								value={inputs.adress}
+								value={inputs.enterprise}
 								onChange={inputValidation}
 							/>
 						</div>
-					) : null}
-					{data.other ? (
-						<div
-							className={`${
-								!even && lastOdd === "other" ? "odd" : "mitad"
-							}`}
-						>
-							<TextField
-								id="otherText"
+						<div className="m">
+							<input
+								id="position"
 								type="text"
-								name="otherText"
-								label={data.otherText}
+								name="position"
+								placeholder="Cargo/Puesto"
 								variant="filled"
-								value={inputs.otherText}
+								value={inputs.position}
 								onChange={inputValidation}
 							/>
 						</div>
-					) : null}
-					<div className="odd">
+					</div>
+
+					<div className="campo">
 						<ButtonAntd
 							htmlType="submit"
 							className="btn"
 							id="btn"
-							style={{
-								cursor: "pointer",
-								background: `${options.buttonBackground}`,
-							}}
 						>
 							<p>Registrarse</p>
 						</ButtonAntd>
 					</div>
-					{/* <div className="campo">
-						<div className="mitad">
-							<ColorButton
-								variant="contained"
-								color="primary"
-								className="btn2"
-								startIcon={
-									<VerticalAlignBottomIcon className="icono" />
-								}
-								onClick={() => descargar()}
-							>
-								<a
-									style={{
-										background: "transparent",
-										border: "transparent",
-										cursor: "pointer",
-										fontWeight: "700",
-									}}
-								>
-									<p>Descargar Agenda</p>{" "}
-								</a>
-							</ColorButton>
-						</div>
-					</div> */}
 				</Form>
 			) : null}
 		</>

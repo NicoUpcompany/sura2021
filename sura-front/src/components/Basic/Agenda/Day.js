@@ -9,7 +9,7 @@ import FreeBreakfastIcon from "@material-ui/icons/FreeBreakfast";
 import { basePath, apiVersion } from "../../../api/config";
 
 import flecha from "../../../assets/img/flecha.png";
-import footerRegistro from "../../../assets/img/footerRegistro.png";
+//import footerRegistro from "../../../assets/img/footerRegistro.png";
 // import cafe from "../../../assets/img/cafe.png";
 
 const Day = ({

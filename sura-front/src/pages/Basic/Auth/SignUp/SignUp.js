@@ -13,6 +13,7 @@ import { getEventOptionsApi } from "../../../../api/Admin/eventOptions";
 import { getAccessTokenApi } from "../../../../api/auth";
 import Socket from "../../../../utils/socket";
 
+import logo from "../../../../assets/images/logo.svg";
  
 import "./SignUp.scss";
 
@@ -166,156 +167,43 @@ const SignUp = () => {
 			tip="Cargando..."
 			indicator={antIcon}
 		>
-			<div className="fondo">
-				<div className="row">
-					<div className="col3">
-						<img src={image} alt="fondo" />
-					</div>
-					<div className="col4">
-						<div
-							dangerouslySetInnerHTML={{
-								__html: options.title,
-							}}
-						/>
-						{/* <h2 style={{ color: options.titlesColors }}>
-							{options.title}
+
+			<div class="contenedor">
+				<div class="m1">
+					<div>
+						<img src={logo} width="200" />
+						<h2>
+							<span>SEGUROS</span><br/>
+							<strong>ENCUENTRO</strong>
+							<small>Corredores seguros SURA 2021</small>
 						</h2>
-						<p
-							style={{
-								color: options.textsColors,
-								marginBottom: "0px",
-							}}
-						>
-							<strong>
-								GoDigital: Cambiando la manera de interactuar
-							</strong>
+					</div>
+				</div>
+				<div class="m2">
+					<div className="form">
+						<div className="btns">
+							<a href="iniciarsesion" className="a1">INGRESAR</a>
+							<a href="registro" className="a2 active">REGISTRARSE</a>
+						</div>
+						<h2>¡HOLA!</h2>
+						<p>
+							Te invitamos a registrarte en este espacio donde junto a destacados expertos conversaremos sobre los desafíos y cambios que enfrentará la industria en el marco de la regulación, el entorno y el comportamiento de los consumidores.
 						</p>
-						<p style={{ color: options.textsColors }}>
-							En la actualidad, las expectativas de los clientes
-							son cada vez más altas. En GoDigital exploraremos
-							cómo grandes empresas han implementado soluciones
-							con Inteligencia Artificial para potenciar la
-							atención que brindan en todos sus canales digitales.
-						</p> */}
-						<RegisterForm
-							setSaveData={setSaveData}
-							setLoading={setLoading}
-							options={options}
-						/>
-						{indexStatus ? null : (
-							<a onClick={() => setSaveData(1)}>
-								Ya estoy registrado
-							</a>
-						)}
+						<div className="campos">
+							<RegisterForm
+								setSaveData={setSaveData}
+								setLoading={setLoading}
+								options={options}
+							/>
+						</div>
+						<div className="copyright">
+							Copyright® <strong>www.upwebinar.cl</strong>
+						</div>
 					</div>
 				</div>
 			</div>
-			{/*
-			<div className="agenda-container">
-				<div className="section-2">
-					<div className="exponentes">
-						<h3>Oradores</h3>
-						<div className="description grey">
-							<div className="icon rocioCossini"></div>
-							<div className="nombrecolaborador">
-								<span>
-									<strong>Rocío Cossini</strong>
-								</span>
-								<br />
-								<span>
-									Gerente Comercial Chile, Perú y Ecuador
-								</span>
-								<br />
-								<span className="ultimo">
-									<strong>Presentadora</strong>
-								</span>
-							</div>
-						</div>
-						<div className="description">
-							<div className="icon pabloGonzalia"></div>
-							<div className="nombrecolaborador">
-								<span>
-									<strong>Pablo Gonzalía</strong>
-								</span>
-								<br />
-								<span>Gerente General Émerix Chile</span>
-								<br />
-								<span className="ultimo">
-									<strong>
-										Posee estudios en Ingeniería en sistemas
-										de Información por la Universidad
-										Tecnológica Nacional (UTN) y es
-										especialista en Gerenciamiento de
-										Proyectos. Tiene más de 15 años de
-										experiencia en Proyectos de
-										implementación de Sistemas de
-										Información para el mercado financiero
-										con foco en la Gestión de Carteras de
-										Clientes y Recupero, tanto en Argentina
-										como en Latinoamérica.
-									</strong>
-								</span>
-							</div>
-						</div>
-						<div className="description grey">
-							<div className="icon antonioCastillo"></div>
-							<div className="nombrecolaborador">
-								<span>
-									<strong>Antonio Castillo</strong>
-								</span>
-								<br />
-								<span>Gerente General Émerix México</span>
-								<br />
-								<span className="ultimo">
-									<strong>
-										Ingeniero en Electrónica y
-										Comunicaciones de la Escuela Superior de
-										Ingeniería Mecánica y Eléctrica. Tiene
-										más de 25 años de experiencia en la
-										Industria de la Tecnología de
-										Información. Ha participado en diversos
-										proyectos de automatización de cobranza
-										de carteras de crédito para bancos,
-										financieras, empresas de servicios y
-										retailers en Latinoamérica.
-									</strong>
-								</span>
-							</div>
-						</div>
-						<div className="description">
-							<div className="icon enriqueAlvarez"></div>
-							<div className="nombrecolaborador">
-								<span>
-									<strong>Enrique Álvarez</strong>
-								</span>
-								<br />
-								<span>Solutions Consultant en Cognitiva</span>
-								<br />
-								<span className="ultimo">
-									<strong>
-										Ingeniero Comercial Master en Business
-										Intelligence Universidad de
-										Barcelona-OBS; Advanced Management
-										Program IESE-ESE Business School;
-										Programa de Alta Dirección de Riesgo
-										Instituto de Empresas Business School de
-										Madrid. Posee +20 años de experiencia en
-										la industria financiera y servicios,
-										liderando áreas de Riesgos, Cobranzas y
-										Análisis.
-									</strong>
-								</span>
-							</div>
-						</div>
-						<img
-							src={footerRegistro}
-							alt="footerRegistro"
-							className="footerRegistro"
-						/>
-					</div>
-				</div>
-			</div>
-		*/}
+
+			
 			{/* <footer className="footer-sign-up">
 				<img className="logo" src={logo} alt="logo" />
 				<a

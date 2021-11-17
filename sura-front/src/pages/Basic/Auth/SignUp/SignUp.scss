@@ -1,297 +1,222 @@
-.row {
+.m1{
 	float: left;
-	width: 100%;
-	display: flex;
-}
-.col3 {
-	float: left;
-	// min-width: 480px;
-	// background-image: url(../../../../assets/img/fondoRegistro.svg);
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	// min-height: 100vh;
-	position: relative;
-	// overflow: hidden;
-	// height: 720px;
-	img {
-		height: 100vh;
-	}
-
-	.logo {
-		position: absolute;
-		bottom: 50px;
-		left: 50px;
-	}
-	.fondoMovil {
-		display: none;
-	}
-	.fecha {
-		position: absolute;
-		top: 58%;
-		left: 50px;
-		transform: translateY(-50%);
-		max-width: 600px;
-		width: 70%;
-	}
-	.titulo {
-		position: absolute;
-		top: 27%;
-		left: 50%;
-		width: calc(100% - 100px);
-		max-width: 400px;
-		transform: translate(-50%, -50%);
-	}
-}
-.col4 {
-	float: left;
-	width: calc(100%);
-	padding: 80px;
-	flex-direction: column;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 100vh;
-
-	a {
-		position: relative;
-		display: block;
-		margin: 0 auto;
-	}
-}
-
-.no-top-agenda {
-	border: none !important;
-}
-
-.agenda-container {
-	position: relative;
-	display: block;
-	width: 100%;
+	width: 50%;
+	background: url('../../../../assets/images/trama.svg') bottom center no-repeat #0033A0;
+	background-size: contain;
+	color: #fff;
 	min-height: 100vh;
-	float: left;
-	border-top: 5px solid #002f67;
-
-	.section-1 {
-		position: relative;
-		display: block;
-		background-color: #f8f9fa;
-		padding: 100px 0;
-
-		.about {
-			margin: 0 auto;
-			width: 100%;
-			max-width: 1000px;
-
-			h3 {
-				font-family: "Montserrat" !important;
-				font-weight: bold;
-				font-size: 20px;
-				color: #161853;
-				margin-bottom: 20px;
-			}
-
-			p {
-				font-family: "Montserrat" !important;
-				font-weight: bold;
-				font-size: 14px;
-				color: #666666;
-				margin-bottom: 50px;
-			}
-		}
-	}
-
-	.section-2 {
-		position: relative;
-		display: table;
-		width: 100%;
-		padding: 75px 0;
-
-		.grey {
-			background-color: #f8f9fa !important;
-		}
-
-		.exponentes {
-			margin: 0 auto;
-			width: 100%;
-			width: 1000px;
-
-			h3 {
-				font-family: "Montserrat" !important;
-				font-weight: bold;
-				font-size: 20px;
-				color: #161853;
-				margin-bottom: 20px;
-			}
-
-			.description {
-				border: 1px solid #f1f5f7;
-				padding: 20px;
-
-				.icon {
-					float: left;
-					width: 80px;
-					height: 80px;
-					border-radius: 200px;
-					margin-bottom: 10px;
-					margin-right: 15px;
-				}
-				.nombrecolaborador {
-					color: #616161 !important;
-					font-size: 16px !important;
-					text-align: left;
-					margin-left: 20px;
-					padding-left: 75px;
-
-					span {
-						font-family: "Montserrat" !important;
-						color: #666666;
-						padding: 10px 0;
-					}
-
-					.ultimo {
-						font-weight: 500;
-					}
-
-					.res {
-						margin-left: 75px;
-					}
-				}
-			}
-
-			.footerRegistro {
-				max-width: 1000px;
-			}
-		}
-	}
-}
-
-.user {
-	background-image: url("../../../../assets/img/speakers/default-user-img.jpg");
-	background-position: center center;
-	background-size: cover;
-}
-
-.pabloGonzalia {
-	background-image: url("../../../../assets/images/Pablo\ Gonzalía\ bn.jpg");
-	background-position: center center;
-	background-size: cover;
-}
-
-.antonioCastillo {
-	background-image: url("../../../../assets/images/Antonio\ Castillo.\ bnjpg.jpg");
-	background-position: center center;
-	background-size: cover;
-}
-
-.enriqueAlvarez {
-	background-image: url("../../../../assets/images/enrique_alvarez.jpeg");
-	background-position: center center;
-	background-size: cover;
-}
-
-.rocioCossini {
-	background-image: url("../../../../assets/images/Rocio\ Cossini_bn.jpg");
-	background-position: center top 145px;
-	background-size: cover;
-}
-
-.footer-sign-up {
-	position: relative;
 	display: flex;
-	justify-content: flex-end;
+	align-content: center;
+	justify-content: center;
 	align-items: center;
-	width: 100%;
-	background-color: #f8f9fa;
-	min-height: 100px;
+   
+	h2{
+		margin-top: 80px;
+		font-size: 50px;
+		font-weight: 600;
+		line-height: 50px;
+		max-width: 420px;
+		color: #fff;
 
-	a {
-		color: #000;
-
-		&:hover {
-			color: #000 !important;
+		span{
+			float: left;
+			clear: both;
+			font-weight: 600;
+			font-size: 14px;
+			background: #fff;
+			color: #0033A0;
+			line-height: 50px;
+			padding: 0 25px;
+			border-radius: 25px;
+			margin-bottom: 30px;
 		}
-	}
-}
-
-@media only screen and (min-width: 320px) and (max-width: 790px) {
-	.row {
-		float: left;
-		width: 100%;
-		display: flex;
-		flex-direction: column !important;
-	}
-	.col3 {
-		float: left;
-		width: 100%;
-		position: relative;
-		img {
-			width: 100%;
-			height: auto !important;
-		}
-		.logo {
-			position: absolute;
-			bottom: 20px;
-			left: 20px;
-			width: 120px;
-		}
-		.fondoMovil {
-			display: block;
+		strong{
 			float: left;
 			width: 100%;
+			font-weight: 600;
+			font-size: 54px;
+		}
+		small{
+			float: left;
+			width: 100%;
+			font-size: 38px;
 		}
 	}
-	.col4 {
+}
+
+.m2{
+	float: left;
+	width: 50%;
+	min-height: 100vh;
+	background: #EDEDED;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+
+	.form{
+		display: table;
+		clear: both;
+		margin: 0 auto;
+		max-width: 615px;
+		width: 100%;
+		padding: 0 80px;
+	}
+	.btns{
 		float: left;
 		width: 100%;
-		padding: 20px 20px 50px;
-		flex-direction: column;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		height: auto;
-		h2 {
-			text-align: left;
-			font-weight: bold;
-			font-size: 32px;
-			line-height: 17px;
-			letter-spacing: -0.02em;
-			width: 100%;
-			max-width: 1000px;
+
+		.a1{
+			float: left;
+			width: 50%;
+			background: #fff;
+			line-height: 58px;
+			border-radius: 100px 0 0 100px;
+			font-size: 12px;
+			color: #53565A;
+			text-decoration: none;
+			text-align: center;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 500;
 		}
-		p {
-			font-weight: 400;
-			font-size: 16px;
-			color: black;
-			width: 100%;
-			max-width: 1000px;
+		.a2{
+			float: left;
+			width: 50%;
+			background: #fff;
+			line-height: 58px;
+			border-radius: 0 100px 100px 0;
+			font-size: 12px;
+			color: #53565A;
+			text-decoration: none;
+			text-align: center;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 500;
 		}
-		a {
-			width: 100%;
-			max-width: 1000px;
+		.active{
+			background: #00AEC7;
+			color: #fff;
 		}
 	}
-	.agenda-container {
-		.section-1 {
-			h3,
-			p {
-				margin: 0 20px;
-			}
+	h2{
+		float: left;
+		width: 100%;
+		margin: 50px 0 20px;
+		color: #53565A;
+		font-size: 30px;
+		font-weight: 600;
+	}
+	p{
+		float: left;
+		width: 100%;
+		font-size: 14px;
+		margin: 0;
+		font-family: 'Barlow', sans-serif;
+	}
+	.campos{
+		float: left;
+		width: 100%;
+		margin-top: 50px;
+	}
+	.campo{
+		float: left;
+		width: 100%;
+		margin-bottom: 20px;
+
+		.m{
+			float: left;
+			width: calc(50% - 10px);
+			margin-right: 20px;
 		}
-		.section-2 {
-			h3 {
-				margin: 0 20px;
-			}
+		.m:nth-child(2n){
+			margin-right: 0;
+		}
+		input{
+			float: left;
+			width: 100%;
+			background: #fff;
+			line-height: 50px;
+			border-radius: 25px;
+			color: #53565A;
+			border: 0;
+			padding: 0 25px;
+			font-size: 12px;
+		}
+		input::placeholder{
+			color: #53565A;
+		}
+		.btn{
+			float: left;
+			width: 100%;
+			background: #0033A0;
+			color: #fff;
+			border: 0;
+			border-radius: 25px;
+			line-height: 50px;
+			font-size: 12px;
+			font-weight: 600;
+			height: auto;
+			padding: 0;
+			text-transform: uppercase;
+			font-family: 'Montserrat', sans-serif;
+		}
+		.a3{
+			display: table;
+			clear: both;
+			margin: 0 auto;
+			color: #3D5B9C;
+			text-transform: uppercase;
+			font-size: 12px;
+			text-decoration: none;
+			font-weight: 600;
+		}
+		.tel{
+			position: relative;
+		}
+		.tel span{
+			position: absolute;
+			top: 0;
+			left: 20px;
+			line-height: 50px;
+			font-size: 12px;
+			color: #53565A;
+		}
+		.tel input{
+			padding-left: 50px;
+		}
+	}
+	.copyright{
+		float: left;
+		width: 100%;
+		text-align: center;
+		font-weight: 400;
+		font-size: 12px;
+		color: #53565A;
+		margin-top: 40px;
+		font-family: 'Montserrat', sans-serif;
+	}
+}
 
-			.exponentes {
+@media only screen and (min-width: 320px) and (max-width: 1024px) {
+	.m1{
+		width: 100%;
+		padding: 0 40px;
+	}
+	.m2{
+		width: 100%;
+
+		.form{
+			padding: 40px;
+		}
+		.campo{
+			.m{
 				width: 100%;
-				max-width: none;
-
-				.footerRegistro {
-					width: 100%;
-					max-width: none;
-				}
+				margin-right: 0;
+			}
+			.m:first-child{
+				margin-bottom: 20px;
 			}
 		}
 	}
 }
+
+  

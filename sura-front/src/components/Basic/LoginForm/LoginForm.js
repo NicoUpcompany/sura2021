@@ -244,9 +244,11 @@ const LoginForm = (props) => {
 				signIn();
 			}}
 		>
-			<div className="campo">
-				<TextField
-					label="Correo"
+
+			<h2>Acreditarse</h2>
+			<div class="campo">
+				<input
+					placeholder="Mail"
 					type="email"
 					variant="filled"
 					id="email"
@@ -255,14 +257,15 @@ const LoginForm = (props) => {
 					onChange={inputValidation}
 				/>
 			</div>
-			<div className="campobutton">
-				<button
-					className="btn"
-					style={{ border: "transparent", cursor: "pointer" }}
-				>
-					Ingresar
-				</button>
+			<div class="campo">
+				<button class="btn">INGRESAR</button>
 			</div>
+			<div class="campo">
+				<a href="registro" class="a3">
+					aún No Estoy registrado.  REGISTRARME
+				</a>
+			</div>
+
 			{/* <a onClick={() => setSaveData(1)} className="enlace">
 				Aún no estoy registrado
 			</a> */}

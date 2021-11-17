@@ -15,8 +15,8 @@ import { getEventOptionsApi } from "../../../../api/Admin/eventOptions";
 import { getSignInApi, getSignInImageApi } from "../../../../api/Admin/singIn";
 import FormLogin from "../../../../components/Basic/LoginForm/LoginForm";
 import Socket from "../../../../utils/socket";
-
-import logoBlanco from '../../../../assets/images/stand/logo.png'
+import logo from "../../../../assets/images/logo.svg";
+//import logoBlanco from '../../../../assets/images/stand/logo.png'
 
 import "./SignIn.scss";
 
@@ -156,22 +156,16 @@ const SignIn = () => {
 					$this.empty();
 					if (countDownDate > now) {
 						$this.append(
-							"<div><h1>" + days + "</h1><span>Días</span></div>"
+							"<div><span>Días</span><h1>" + days + "</h1></div>"
 						);
 						$this.append(
-							"<div><h1>" +
-								hours +
-								"</h1><span>Horas</span></div>"
+							"<div><span>Horas</span><h1>" + hours + "</h1></div>"
 						);
 						$this.append(
-							"<div><h1>" +
-								minutes +
-								"</h1><span>Minutos</span></div>"
+							"<div><span>Minutos</span><h1>" + minutes + "</h1></div>"
 						);
 						$this.append(
-							"<div><h1>" +
-								seconds +
-								"</h1><span>Segundos</span></div>"
+							"<div><span>Segundos</span><h1>" + seconds + "</h1></div>"
 						);
 					} else {
 						setState(false);
@@ -212,68 +206,6 @@ const SignIn = () => {
 				const logoResult = await getSignInImageApi(result.signIn.logo);
 				setLogo(logoResult);
 			}
-			if (result.signIn.background.length > 0) {
-				const backgroundResult = await getSignInImageApi(
-					result.signIn.background
-				);
-				var css = `
-					.fondo .contenedorRegistro {
-						background-image: url(${backgroundResult}) !important;
-					}
-					.campobutton button {
-						background-color: ${result.signIn.buttonBackground} !important;
-					}
-					.campobutton button:hover:hover{
-						background-color: ${result.signIn.buttonBackgroundHover} !important;
-						color: white !important;
-					}
-					.fondo .contenedorRegistro .row .form h1 {
-						color: ${result.signIn.titlesColors} !important;
-					}
-					.fondo .contenedorRegistro .row .form .login {
-						color: ${result.signIn.textsColors} !important;
-					}
-					.fondo .contenedorRegistro .row .form .cronometro div {
-						color: ${result.signIn.chronometerColors} !important;
-					}
-					.fondo .contenedorRegistro .row .form .cronometro div {
-						color: ${result.signIn.chronometerColors} !important;
-					}
-					.fondo .contenedorRegistro .row .form .cronometro div h1 {
-						color: ${result.signIn.chronometerColors} !important;
-					}
-					.fondo .contenedorRegistro .row .form .cronometro div span {
-						color: ${result.signIn.chronometerColors} !important;
-					}
-					.MuiFilledInput-underline:hover:before {
-						border-bottom: 1px solid ${result.signIn.buttonBackground} !important;
-					}
-					.MuiFilledInput-underline:focus:before {
-						border-bottom: 1px solid ${result.signIn.buttonBackground} !important;
-					}
-					.MuiFilledInput-underline:before {
-						border-bottom: 1px solid ${result.signIn.buttonBackground} !important;
-					}
-					.MuiFormLabel-root.Mui-focused {
-						color: ${result.signIn.buttonBackgroundHover} !important
-					}
-					.MuiFilledInput-underline:after {
-						border-bottom: 1px solid ${result.signIn.buttonBackgroundHover} !important;
-					}
-					.enlace {
-						color: ${result.signIn.textsColors} !important;
-					}
-				`;
-				var style = document.createElement("style");
-
-				if (style.styleSheet) {
-					style.styleSheet.cssText = css;
-				} else {
-					style.appendChild(document.createTextNode(css));
-				}
-				document.getElementsByTagName("head")[0].appendChild(style);
-				setLoading(false);
-			}
 		}
 	};
 
@@ -303,68 +235,51 @@ const SignIn = () => {
 				tip="Cargando..."
 				indicator={antIcon}
 			>
-				<div className="fondo">
-					<div className="contenedorRegistro">
-						<div className="row">
-							<div className="form">
-								<img
-									src={logoBlanco}
-									style={{
-										width: `${options.widthLogo}px`,
-										marginBottom:0
-									}}
-									alt="logo"
-									className="titulo"
-								/>
-								<div
-									dangerouslySetInnerHTML={{
-										__html: options.title,
-									}}
-								/>
-								<div
-									dangerouslySetInnerHTML={{
-										__html: options.text,
-									}}
-								/>
-								{state ? (
-									<div className="cronometro">
-										<div>
-											<h1> </h1>
-											<span>Día</span>
-										</div>
-										<div>
-											<h1> </h1>
-											<span>Hora</span>
-										</div>
-										<div>
-											<h1> </h1>
-											<span>Minutos</span>
-										</div>
-										<div>
-											<h1> </h1>
-											<span>Segundos</span>
-										</div>
-									</div>
-								) : null}
-								<div div className="card">
-									<FormLogin
-										setLoading={setLoading}
-										setSaveData={setSaveData}
-									/>
-								</div>
-							</div>
+				<div class="contenedor">
+					<div class="m1">
+						<div>
+							<img src={logo} width="200" />
+							<h2>
+								<span>SEGUROS</span><br/>
+								<strong>ENCUENTRO</strong>
+								<small>Corredores seguros SURA 2021</small>
+							</h2>
 						</div>
 					</div>
-				</div>
-				{options.statusCode ? (
-					<div className="pane-sign-in">
-						{parse(`
-							<style>${css}</style>
-							<body>${html}</body>
-							<script>${js}</script>
-						`)}
+					<div class="m2">
+						
+						<div className="form">
+							<div class="btns">
+								<a href="iniciarsesion" class="a1 active">INGRESAR</a>
+								<a href="registro" class="a2">REGISTRARSE</a>
+							</div>
+							
+							<div class="campos">
+							{state ? (
+								<>
+									<h2>Faltan</h2>
+									<div className="cronometro"></div>
+								</>
+								) : null}
+							</div>
+							{/* 
+							<div class="campos">
+								<FormLogin
+									setLoading={setLoading}
+									setSaveData={setSaveData}
+								/>
+							</div>
+							*/}
+
+							<div class="copyright">
+								Copyright® <strong>www.upwebinar.cl</strong>
+							</div>
+
+						</div>
+						
 					</div>
-				) : null}
+
+				</div>
 			</Spin>
 		</div>
 	);
