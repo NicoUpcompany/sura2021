@@ -65,7 +65,7 @@ export function getEventOptionsApi() {
 }
 
 export function putUploadFaviconApi(token, image, id) {
-	const url = `${basePath}/${apiVersion}//event-options-image/${id}`;
+	const url = `${basePath}/${apiVersion}/event-options-image/${id}`;
 
 	const formData = new FormData();
 	formData.append("image", image, image.name);

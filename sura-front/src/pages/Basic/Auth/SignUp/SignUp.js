@@ -171,11 +171,11 @@ const SignUp = () => {
 			<div class="contenedor">
 				<div class="m1">
 					<div>
-						<img src={logo} width="250" />
+						<img src={logo} alt="Sura" width="250" className="logo-sura" />
 						<h2>
 							<span>SEGUROS</span><br/>
 							<strong>ENCUENTRO</strong>
-							<small>Corredores seguros SURA 2021</small>
+							<small>Corredores Seguros SURA 2021</small>
 						</h2>
 					</div>
 				</div>
