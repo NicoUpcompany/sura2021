@@ -238,7 +238,7 @@ const SignIn = () => {
 				<div class="contenedor">
 					<div class="m1">
 						<div>
-							<img src={logo} width="200" />
+							<img src={logo} width="250" />
 							<h2>
 								<span>SEGUROS</span><br/>
 								<strong>ENCUENTRO</strong>

@@ -11,6 +11,9 @@ import jwtDecode from "jwt-decode";
 import moment from "moment";
 import momentTimezone from "moment-timezone";
 import "moment/locale/es";
+import {CopyToClipboard} from 'react-copy-to-clipboard';
+import { notification } from 'antd';
+
 
 import { eventApi } from "../../../api/events";
 import { getAccessTokenApi } from "../../../api/auth";
@@ -252,6 +255,14 @@ const Confirmacion = () => {
 		}
 	};
 
+	const linkCopiado = () => {
+		notification.open({
+			message: '',
+			description: '¡Link copiado al portapapeles!',
+			onClick: () => { /* console.log('Notification Clicked!'); */ },
+		});
+	};
+
 	const antIcon = <LoadingOutlined spin />;
 
 	return (
@@ -338,8 +349,13 @@ const Confirmacion = () => {
 					</div>
 					<div class="box2">
 						<span>Link del evento</span>
-						<div class="link">https://surasummit2021.cl</div>
-						<div class="btn2"><span class="material-icons">content_copy</span> copiar link</div>
+						<div class="link">https://encuentrocorredores2021.upwebinar.cl</div>
+						{/* <div class="btn2"><span class="material-icons">content_copy</span> copiar link</div> */}
+						
+						<CopyToClipboard text="https://encuentrocorredores2021.upwebinar.cl"  onCopy={() => linkCopiado()}>
+							<button class="btn2"><span class="material-icons">content_copy</span> copiar link</button>
+						</CopyToClipboard>
+
 						{/*<div class="btn3">Ingresar a la sala</div>*/}
 					</div>
 
